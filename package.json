@@ -1,11 +1,23 @@
 {
   "name": "nigerian-bank-select",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "files": ["dist"],
+  "main": "./dist/nigerian-bank-select.umd.cjs",
+  "module": "./dist/nigerian-bank-select.js",
+  "exports": {
+    ".": {
+        "import": "./dist/nigerian-bank-select.js",
+        "require": "./dist/nigerian-bank-select.umd.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "types": "vue-tsc",
     "preview": "vite preview"
   },
   "dependencies": {

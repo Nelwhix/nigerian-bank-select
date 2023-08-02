@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import "nigerian-bank-icons/index.css";
 import banks from "nigerian-bank-icons/assets/banks.json"
 import { ref, watch } from "vue"
 
