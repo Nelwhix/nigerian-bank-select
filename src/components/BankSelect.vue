@@ -1,18 +1,26 @@
 <script setup lang="ts">
 import "nigerian-bank-icons/index.css";
 import banks from "nigerian-bank-icons/assets/banks.json"
-import { ref, watch } from "vue"
 
-const emit = defineEmits(['onSelect'])
-const selected = ref(null)
+defineProps(['modelValue'])
+const emit = defineEmits(['update:modelValue'])
 
-watch(selected, (nSelected) => {
-    emit('onSelect', nSelected)
-})
+interface Bank {
+    name: string
+    slug: string
+    code: string
+    ussd: string
+    logo: string
+}
+
+const updateValue = (nValue: Bank) => {
+    emit('update:modelValue', nValue)
+}
+
 </script>
 
 <template>
-  <v-select v-model="selected" label="name" :options="banks">
+  <v-select :value="modelValue" @input="updateValue" label="name" :options="banks">
     <template #selected-option="{ name, code }">
       <span  :class="`nbi nbi-${code}`"></span>
       <span>{{ name }}</span>
