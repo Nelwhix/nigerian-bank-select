@@ -13,7 +13,7 @@ export default defineConfig({
         fileName: "nigerian-bank-select"
     },
     rollupOptions: {
-        external: ["vue"],
+        external: ["vue" ],
         output: {
             globals: {
                 vue: "Vue",
