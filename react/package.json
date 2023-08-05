@@ -1,5 +1,5 @@
 {
-  "name": "react",
+  "name": "@nigerian-bank-select/react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "nigerian-bank-icons": "^2.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-select": "^5.7.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
