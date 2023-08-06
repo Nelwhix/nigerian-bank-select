@@ -1,6 +1,5 @@
 {
   "name": "@nigerian-bank-select/vue",
-  "private": false,
   "version": "1.0.3",
   "type": "module",
   "files": ["dist"],
