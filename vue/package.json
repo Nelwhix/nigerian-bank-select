@@ -1,7 +1,7 @@
 {
   "name": "@nigerian-bank-select/vue",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "files": ["dist"],
   "main": "./dist/nigerian-bank-select.umd.cjs",
