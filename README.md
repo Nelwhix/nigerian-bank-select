@@ -15,3 +15,23 @@ First off, import the BankSelect component and the css
     import "nigerian-bank-select/style.css"
 </script>
 ```
+
+now you can add the component to your template. It emits a 'on-select' event when an option is clicked
+
+```vue
+    <BankSelect @on-select="handleSelect" />
+```
+
+and you can handle the event like so:
+
+```vue
+<script setup lang="ts">
+import { ref } from "vue"
+
+const selected = ref(null)
+
+const handleSelect = (nVal: any) => {
+    selected.value = nVal
+}
+</script>
+```
