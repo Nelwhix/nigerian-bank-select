@@ -2,22 +2,27 @@
   "name": "nigerian-bank-select",
   "version": "1.0.3",
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/nigerian-bank-select.umd.cjs",
+  "types": "./dist/index.d.ts",
   "module": "./dist/nigerian-bank-select.js",
   "exports": {
     ".": {
-        "import": "./dist/nigerian-bank-select.js",
-        "require": "./dist/nigerian-bank-select.umd.cjs"
+      "import": "./dist/nigerian-bank-select.js",
+      "require": "./dist/nigerian-bank-select.umd.cjs",
+      "types": "./dist/index.d.ts"
     },
     "./style.css": "./dist/style.css"
   },
-  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vite build && vue-tsc --emitDeclarationOnly",
     "types": "vue-tsc",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "nigerian-bank-icons": "^2.0.0",
@@ -25,11 +30,13 @@
     "vue-select": "^4.0.0-beta.6"
   },
   "devDependencies": {
+    "@testing-library/vue": "^7.0.0",
     "@types/node": "^20.4.6",
     "@types/vue-select": "^3.16.2",
     "@vitejs/plugin-vue": "^4.2.3",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
+    "vitest": "^0.34.1",
     "vue-tsc": "^1.8.5"
   }
 }
